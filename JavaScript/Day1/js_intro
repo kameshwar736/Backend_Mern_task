@@ -1,0 +1,41 @@
+1.What is JavaScript?
+
+	javascript is an high level interpreted programing language initial javascript used in client side with extension .js and run in chrome browser with v8 engine complier . then after it build for server side it run with the help of node js it has v8engine can install locally in our system 
+
+2.Why was JavaScript created?
+
+JavaScript was created to add interactivity, animations, and dynamic behavior to static web pages.
+
+3.Is JavaScript interpreted or compiled?
+
+	javascript is an interpreted language cause javascript follow synchronous process like line by line execution.
+
+4.What are the features of JavaScript?
+
+	1.first of all js is popular for work on both client side and server side 
+	2.javascript have an popular framework like react,angular for client side and next.js for both client side and server side , and express for serverside and api.
+	3.handle asynchorous process synchorous
+
+5.Why is JavaScript called a single-threaded language?
+
+	javascript handles one process at the time and execute in sync so it is called single threaded language.
+
+6.What is the difference between JavaScript and Java?
+
+	Despite sharing a similar name, Java and JavaScript are entirely different programming languages that serve distinct purposes, utilize different runtime environments, and follow separate syntax structures.
+
+7.What is ECMAScript?
+
+	ECMAScript is an feature introducing version of javascript cause javascript was built in 10 day so it has an many bug in js so to fix it and introduce in es feature
+
+8.What is the role of a JavaScript engine?
+
+	the javascript engine was v8 engine it has two path one is memory allocation and another one is execution path. 
+
+9.What is V8 Engine?
+	
+	v8 engine is an javascript compiler where used in chrome browser and also used in node js for server side compiler .
+
+10.How does JavaScript execute code?
+
+	js is an synchronous process it execute code line by line .
