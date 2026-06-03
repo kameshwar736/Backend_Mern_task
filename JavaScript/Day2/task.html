@@ -1,0 +1,108 @@
+<script>
+
+    // Task 1
+    // Create an arrow function that accepts a student's first name and last name and returns the full name.
+
+    const fullName = (firstName, lastName) => {
+        const userName = firstName + lastName;
+        return userName
+    }
+
+    console.log("fullname :",fullName("kameshwar", "T"));
+
+    // Task 2
+    // Create an arrow function that accepts a product price and quantity and returns the total amount.
+
+    const generateBill = (productPrice, quantity) => {
+        const totalAmount = quantity * productPrice;
+        return totalAmount
+    }
+
+    console.log("totalAmount :",generateBill(1000, 5));
+
+    // Task 3
+    // Create an arrow function that accepts a person's age and returns whether they are eligible for voting.
+
+    const validatePeople = (age)=>{
+        const checkAge = age>=18?"You are eligible":"You are not eligible";
+        return checkAge;
+    }
+
+    console.log("validate :",validatePeople(18));
+
+    // Task 4
+    // Create an arrow function that accepts three numbers and returns the largest number.
+    
+    const findLargestNum = (...nums)=>{
+
+        let tempLargest = 0;
+
+        // for(numbers of nums){
+        //     tempLargest += numbers > 
+        // }
+
+        for(let i=0 ; i<nums.length-1 ; i++){
+            
+            tempLargest = tempLargest<nums[i]? nums[i] : tempLargest;
+            console.log(tempLargest);
+            
+        }
+        
+        
+        
+        return tempLargest;
+    }
+
+    console.log("largest number :",findLargestNum(10,4,6,4,1,2,3));
+    
+    //   Task 5
+    // Create an arrow function that accepts a username. If no username is provided, return "Guest" using a default parameter.
+
+    const userDetail = (userName = "Guest")=>{
+        return userName;
+    }
+
+    console.log("UserName :", userDetail());
+    
+
+    // Task 6
+    // Create an arrow function that accepts two numbers and returns:
+
+    // Sum
+    // Difference
+    // Multiplication
+    // Division
+
+    const calC = (num1 = 0 , num2 = 0)=>{
+
+        const sumNum = num1 + num2;
+        const subNum = num1 - num2;
+        const mulNum = num1 * num2;
+        const divNum = num1 / num2;
+
+        return {add : sumNum , sub : subNum , mul : mulNum , div : divNum}
+
+    }
+
+    console.log("Addition :",calC(5,5).add);
+
+    //Task 7
+    // Create an arrow function that accepts marks of 5 subjects and returns the total and average.
+
+    const result = (...marks)=>{
+        // total
+        let totalMarks = 0;
+        for (number of marks){
+    
+            totalMarks += number;
+
+        }
+        const avgMark = totalMarks/marks.length
+        return {totalMarks : totalMarks , avgMark : avgMark}
+    }
+ 
+    console.log("totalmark",result(40,50,37,68,75).totalMarks);
+    
+
+
+</script>
