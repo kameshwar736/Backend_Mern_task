@@ -1,0 +1,180 @@
+<script>
+
+
+// const getData = new Promise((resloved,rejected)=>{
+
+//     resloved(fetch("https://dummyjson.com/products"))
+// })
+
+
+// getData.then((data)=>{
+//     console.log(data.json());
+    
+// })
+
+
+// const getdata = ()=>{
+//   return fetch("https://dummyjson.com/products").then((resolve)=>{ return resolve.json()})
+// }
+
+// getdata().then((data)=>{
+//     console.log(data);
+    
+// })
+
+const data = new Promise((resolved,rejected)=>{
+
+resolved(setTimeout(()=>{
+    return "hello"
+    
+}))
+
+
+}).then((res)=>{
+    console.log(res);
+    
+})
+
+
+
+// Task 2 - Employee Details
+// Callback Version
+
+const empData = (cb)=>{
+
+return new Promise( (resolved,rejected)=>{
+   let result = cb()
+   resolved(result)
+})
+}
+
+
+empData(()=>{
+    let data = {name : "Kamesh" , age : 20}
+    return data
+}).then((res)=>console.log(res)
+)
+
+// Task 3 - Login System
+// Callback Version
+// const login = (callback) => {
+
+//   setTimeout(() => {
+
+//     callback("Login Success");
+
+//   }, 2000);
+
+// };
+// Task
+// Convert the callback into a Promise and display the result using .then().
+
+const loginValidation = (cb)=>{
+    return new Promise ((resolved,rejected)=>{
+        setTimeout(()=>{
+            const result = cb()
+             resolved(result)
+        },2000)
+
+       
+    },2000)
+}
+
+
+loginValidation(()=>{
+   let login = "sucess"
+   return login
+    
+}).then((res)=>{
+    console.log(res);
+    
+})
+
+
+// Task 4 - Product Loading
+// Callback Version
+// const getProducts = (callback) => {
+
+//   setTimeout(() => {
+
+//     callback([
+
+//       "Laptop",
+
+//       "Mobile",
+
+//       "Keyboard"
+
+//     ]);
+
+//   }, 2000);
+
+// };
+// Task
+// Convert the callback function into a Promise and display products using .then().
+
+
+const callbackFunc = ()=>{
+    let products = ["pen","pencil","sharpner"]
+    return products
+}
+
+
+let loadData = (cb)=>{
+    return new Promise((resolved,rejected)=>{
+        setTimeout(() => {
+            let data = cb
+             resolved(data)
+        }, 2000);
+    })
+}
+
+
+loadData(callbackFunc()).then((res)=>{
+    console.log(res);
+    
+})
+
+
+// Bonus Task 7 - Success & Failure Handling
+// Callback Version
+// const payment = (success, failure) => {
+//   const status = false;
+//   if(status){
+//     success("Payment Success");
+//   }
+//   else{
+//     failure("Payment Failed");
+//   }
+// };
+// Task
+// Convert this callback-based success/failure code into a Promise using:
+// resolve()
+// reject()
+// and handle the result using:
+// .then()
+// .catch()
+
+
+const valid = new Promise((resolved,rejected)=>{
+   let status = false;
+
+  if (status) {
+    resolve(status);     
+  } else {
+    reject("Payment failed");
+  }
+});
+
+
+
+valid.then((res)=>{
+    console.log("Payment succes",res);
+    
+}).catch((rej)=>{
+    console.log("Payment failure");
+    
+})
+
+
+</script>
